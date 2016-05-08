@@ -1,0 +1,12 @@
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Debug\Common.dll.config
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Debug\Common.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Debug\Common.pdb
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Debug\EntityFramework.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Debug\EntityFramework.xml
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\obj\Debug\Common.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\obj\Debug\Common.pdb

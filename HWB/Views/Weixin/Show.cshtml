@@ -1,0 +1,41 @@
+﻿@model Common.Define.ShakeItem
+
+@{
+    Layout = "../Shared/_MobileLayout.cshtml";
+}
+
+
+<table>
+    <tr>
+        <td>
+            姓名
+        </td>
+        <td>
+            @Model.Name
+        </td>
+    </tr>
+    <tr>
+        <td>
+            手机
+        </td>
+        <td>
+            @Model.Telephone
+        </td>
+    </tr>
+    <tr>
+        <td>
+            区域
+        </td>
+        <td>
+            @Model.Area
+        </td>
+    </tr>
+    <tr>
+        <td>
+            成绩
+        </td>
+        <td>
+            @Model.Score
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,14 @@
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\Weixin.dll.config
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\Weixin.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\Weixin.pdb
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\Common.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\EntityFramework.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\Common.pdb
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\EntityFramework.xml
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\obj\Debug\Weixin.csprojResolveAssemblyReference.cache
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\obj\Debug\Weixin.dll
+C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\obj\Debug\Weixin.pdb
