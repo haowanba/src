@@ -10,3 +10,15 @@ C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Debu
 C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\obj\Debug\Common.dll
 C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\obj\Debug\Common.pdb
+D:\Documents\GitHub\src\Common\Common\bin\Debug\Common.dll.config
+D:\Documents\GitHub\src\Common\Common\bin\Debug\Common.dll
+D:\Documents\GitHub\src\Common\Common\bin\Debug\Common.pdb
+D:\Documents\GitHub\src\Common\Common\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\src\Common\Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\src\Common\Common\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\src\Common\Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\src\Common\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Documents\GitHub\src\Common\Common\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\src\Common\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\src\Common\Common\obj\Debug\Common.dll
+D:\Documents\GitHub\src\Common\Common\obj\Debug\Common.pdb

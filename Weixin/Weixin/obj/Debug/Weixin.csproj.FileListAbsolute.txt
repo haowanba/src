@@ -12,3 +12,17 @@ C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\bin\Debu
 C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\obj\Debug\Weixin.csprojResolveAssemblyReference.cache
 C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\obj\Debug\Weixin.dll
 C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Weixin\Weixin\obj\Debug\Weixin.pdb
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\Weixin.dll.config
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\Weixin.dll
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\Weixin.pdb
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\Common.dll
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\Common.pdb
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Documents\GitHub\src\Weixin\Weixin\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\src\Weixin\Weixin\obj\Debug\Weixin.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\src\Weixin\Weixin\obj\Debug\Weixin.dll
+D:\Documents\GitHub\src\Weixin\Weixin\obj\Debug\Weixin.pdb

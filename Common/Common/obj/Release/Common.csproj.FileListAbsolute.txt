@@ -9,3 +9,14 @@ C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Rele
 C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
 C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\obj\Release\Common.dll
 C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\Common\Common\obj\Release\Common.pdb
+D:\Documents\GitHub\src\Common\Common\bin\Release\Common.dll.config
+D:\Documents\GitHub\src\Common\Common\bin\Release\Common.dll
+D:\Documents\GitHub\src\Common\Common\bin\Release\Common.pdb
+D:\Documents\GitHub\src\Common\Common\bin\Release\EntityFramework.dll
+D:\Documents\GitHub\src\Common\Common\bin\Release\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\src\Common\Common\bin\Release\EntityFramework.xml
+D:\Documents\GitHub\src\Common\Common\bin\Release\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\src\Common\Common\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\Documents\GitHub\src\Common\Common\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\Documents\GitHub\src\Common\Common\obj\Release\Common.dll
+D:\Documents\GitHub\src\Common\Common\obj\Release\Common.pdb
