@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using Common.Define;
+using SqlServer;
 using Weixin.Api;
 
 namespace HWB.Controllers
@@ -21,7 +21,7 @@ namespace HWB.Controllers
                     if (requestUrl != null)
                     {
                         string host = requestUrl.Host;
-                        _imgUrl = requestUrl.Scheme + "://" + host + "/favicon.ico";
+                        _imgUrl = requestUrl.Scheme + "://" + host + "/Content/images/logo.jpg";
                     }
                     else
                     {
@@ -42,7 +42,7 @@ namespace HWB.Controllers
         {
             WxConfig config = WeixinAccess.GetWxConfig(Request);
             ViewBag.Title = config.Title = "稻清产品宣传";
-            config.Desc = "这是描述，啦啦啦";
+            config.Desc = "稻清,稻瘟管理新标准！";
             config.ImgUrl = ImgUrl;
             ViewBag.Config = config;
             return View();
@@ -50,41 +50,58 @@ namespace HWB.Controllers
 
         public ActionResult Add(ShakeItem item)
         {
-            using (ShakeItemDbContext context = new ShakeItemDbContext())
+            if (String.IsNullOrEmpty(item.Telephone))
             {
-                context.Add(item);
+                ShakeItemDbHelper.Insert(item);
             }
-
+            else
+            {
+                ShakeItem tmp = ShakeItemDbHelper.GetByTelephone(item.Telephone);
+                if (tmp == null)
+                {
+                    ShakeItemDbHelper.Insert(item);
+                }
+                else
+                {
+                    tmp.Name = item.Name;
+                    tmp.Area = item.Area;
+                    tmp.Score = item.Score;
+                    ShakeItemDbHelper.Update(tmp);
+                }
+            }
             return RedirectToAction("Show", new { id = item.Id });
         }
 
-        public ActionResult Show(int id)
+        public ActionResult Show(string id)
         {
-            ShakeItem item;
-            using (ShakeItemDbContext context = new ShakeItemDbContext())
-            {
-                item = context.Get(id);
-            }
+            //ShakeItem item = ShakeItemDbHelper.GetById(id);
             WxConfig config = WeixinAccess.GetWxConfig(Request);
-            ViewBag.Title = config.Title = "摇一摇，看一看";
+            ViewBag.Title = config.Title = "稻清产品宣传";
             config.Desc = "这是描述，啦啦啦";
             config.ImgUrl = ImgUrl;
             ViewBag.Config = config;
-            return View(item);
+            ViewBag.Id = id;
+            return View();
         }
 
-        public ActionResult TryFindByTel(string tel)
+        public ActionResult Update(string id, int result)
         {
-            using (ShakeItemDbContext context = new ShakeItemDbContext())
-            {
-                DbSet<ShakeItem> items = context.Get();
-                var query = from d in items
-                            where d.Telephone == tel
-                            select d;
-                query.Load();
-                int id = context.Items.ToArray()[0].Id;
-            }
-            return Content("");
+            ShakeItem item = ShakeItemDbHelper.GetById(id);
+            item.Score = result;
+            ShakeItemDbHelper.Update(item);
+
+            return RedirectToAction("Finish", new { id = item.Id });
+        }
+
+        public ActionResult Finish(string id)
+        {
+            ShakeItem item = ShakeItemDbHelper.GetById(id);
+            WxConfig config = WeixinAccess.GetWxConfig(Request);
+            config.Desc = String.Format("我是{0}，来自{1}，2016我推广稻清{2}亩。防治稻瘟，我推荐稻清。", item.Name, item.Area, item.Score);
+            config.ImgUrl = ImgUrl;
+            ViewBag.Title = config.Title = "稻清产品宣传";
+            ViewBag.Config = config;
+            return View(item);
         }
     }
 }

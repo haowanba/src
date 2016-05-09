@@ -8,7 +8,7 @@ namespace Common.Define
     public class ShakeItem
     {
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; }
         [Display(Name = "姓名")]
         public string Name { get; set; }
         [Display(Name = "手机")]
@@ -19,6 +19,12 @@ namespace Common.Define
         [Display(Name = "成绩")]
         //[Range(0, 100, ErrorMessage = "成绩不能大于{2} 不能小于{1}")]
         public decimal Score { get; set; }
+
+        public ShakeItem()
+        {
+            Id = Name = Telephone = Area = String.Empty;
+            Score = 0;
+        }
     }
 
     public class ShakeItemDbContext : GenericDbContext<ShakeItem>

@@ -3,14 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
-    <meta name="viewport" content="width=device-width" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <link href="~/Content/images/logo.jpg" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
     <script>
         wx.config({
-            debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
             appId: '@ViewBag.Config.AppId', // 必填，公众号的唯一标识
             timestamp: @ViewBag.Config.Timestamp, // 必填，生成签名的时间戳
             nonceStr: '@ViewBag.Config.NonceStr', // 必填，生成签名的随机串

@@ -118,12 +118,20 @@
         color: #8BA796;
     }
 
+    .title {
+        color: #009C00;
+        text-shadow: 1px 1px 1px #004900;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
     .content {
         font-size: 2rem;
-        opacity: 0.5;
-        width: 90%;
-        margin: 0 auto;
+        padding: 1rem;
+        color: #EE6A03;
+        font-weight: bold;
     }
+
 
     .userinfo {
         position: absolute;
@@ -133,9 +141,9 @@
 </style>
 
 <div>
-    <p class="content">
-        宣传语宣传语宣传语宣传语宣传语宣传语宣传语宣传语宣传语宣传语语宣传语宣传语宣传语宣传语宣传语语宣传语宣传语宣传语宣传语宣传语语宣传语宣传语宣传语宣传语宣传语
-    </p>
+    <p class="title">稻清<sup>®</sup></p>
+    <p class="content">稻瘟管理新标准！</p>
+
     <form method="post" action="/weixin/add" class="userinfo">
         <div>
             <input name="Name" id="Name" type="text" placeholder="请输入姓名" />
@@ -161,5 +169,25 @@
         if (!doc.addEventListener) return;
         win.addEventListener(resizeEvt, recalc, false);
         doc.addEventListener('DOMContentLoaded', recalc, false);
+
+        //$("#submit").on("click", function() {
+        //    var item = {
+        //        Name: $("#Name").val(),
+        //        Telephone: $("#Telephone").val(),
+        //        Area: $("#Area").val()
+        //    };
+        //    $.ajax({
+        //        url: "/weixin/add",
+        //        type: "post",
+        //        data: item,
+        //        dataType: "json",
+        //        success: function(r) {
+
+        //        },
+        //        error: function(r) {
+        //            alert("哎呀，提交失败了。。。");
+        //        }
+        //    });
+        //});
     })(document, window);
 </script>

@@ -26,3 +26,17 @@ D:\Documents\GitHub\src\Weixin\Weixin\bin\Release\zh-Hans\EntityFramework.SqlSer
 D:\Documents\GitHub\src\Weixin\Weixin\obj\Release\Weixin.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\src\Weixin\Weixin\obj\Release\Weixin.dll
 D:\Documents\GitHub\src\Weixin\Weixin\obj\Release\Weixin.pdb
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\Weixin.dll.config
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\Weixin.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\Weixin.pdb
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\Common.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\EntityFramework.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\Common.pdb
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\EntityFramework.xml
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\obj\Release\Weixin.csprojResolveAssemblyReference.cache
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\obj\Release\Weixin.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Weixin\Weixin\obj\Release\Weixin.pdb

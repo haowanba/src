@@ -20,3 +20,14 @@ D:\Documents\GitHub\src\Common\Common\bin\Release\zh-Hans\EntityFramework.resour
 D:\Documents\GitHub\src\Common\Common\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
 D:\Documents\GitHub\src\Common\Common\obj\Release\Common.dll
 D:\Documents\GitHub\src\Common\Common\obj\Release\Common.pdb
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Release\Common.dll.config
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Release\Common.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Release\Common.pdb
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Release\EntityFramework.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Release\EntityFramework.xml
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\obj\Release\Common.dll
+C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\obj\Release\Common.pdb

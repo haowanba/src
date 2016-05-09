@@ -1,41 +1,213 @@
-﻿@model Common.Define.ShakeItem
-
-@{
+﻿@{
     Layout = "../Shared/_MobileLayout.cshtml";
 }
 
+<style type="text/css">
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #A0A2A1;
+        font-family: "微软雅黑";
+    }
 
-<table>
-    <tr>
-        <td>
-            姓名
-        </td>
-        <td>
-            @Model.Name
-        </td>
-    </tr>
-    <tr>
-        <td>
-            手机
-        </td>
-        <td>
-            @Model.Telephone
-        </td>
-    </tr>
-    <tr>
-        <td>
-            区域
-        </td>
-        <td>
-            @Model.Area
-        </td>
-    </tr>
-    <tr>
-        <td>
-            成绩
-        </td>
-        <td>
-            @Model.Score
-        </td>
-    </tr>
-</table>
+    body, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, select, textarea, button, th, td {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 100%;
+    }
+
+    ul, dl, ol {
+        list-style: none;
+    }
+
+    img, fieldset, input[type="submit"] {
+        border: 0 none;
+    }
+
+    img {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+    }
+
+    em {
+        font-style: normal;
+    }
+
+    strong {
+        font-weight: normal;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    button, input[type="button"] {
+        cursor: pointer;
+        border: 0 none;
+    }
+
+    textarea {
+        word-wrap: break-word;
+        resize: none;
+    }
+    /* word-wrap for opera, resize for webkit */
+    menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        -webkit-user-select: none;
+        -webkit-text-size-adjust: none !important;
+        font-family: Helvetica;
+    }
+
+    input[type="number"] {
+        -webkit-user-select: text;
+    }
+
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+    a, button, input, img {
+        -webkit-touch-callout: none;
+    }
+
+    input, select, textarea {
+        outline: none;
+    }
+
+    html {
+        -ms-touch-action: none;
+    }
+
+    input, button {
+        height: 3rem;
+        opacity: 0.8;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        font-family: "微软雅黑";
+        width: 90%;
+        margin: 1rem auto;
+        display: block;
+    }
+
+    .shake {
+        background: url("/Content/images/shake.jpg") no-repeat center center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    input {
+        color: #65AC1E;
+        border: #65AC1E;
+    }
+
+    button {
+        background-color: #CCE9D5;
+        color: #8BA796;
+    }
+
+    .shakeend {
+        display: none;
+        font-size: 2rem;
+        padding: 5rem 1rem;
+    }
+</style>
+<div id="status"></div>
+<div class="shake" id="shake"></div>
+<div class="shakeend" id="shakeend">点击右上角，分享至朋友圈可查看摇一摇结果。</div>
+<input type="button" value="开始" onclick="onStart(this)" id="beginshake" />
+<script>
+    var shakeItemId = '@ViewBag.Id', host = location.host;
+
+    function toResultPage(score) {
+        //$.ajax({
+        //    url: "/weixin/update",
+        //    type: "post",
+        //    data: { id: shakeItemId, result: score },
+        //    dataType: "json",
+        //    success: function (r) {
+
+        //    },
+        //    error: function (r) {
+        //        alert("哎呀，提交失败了。。。");
+        //    }
+        //});
+        window.location = "http://" + host + "/weixin/update?id=" + shakeItemId + "&result=" + score;
+    }
+    var shake = 4000,
+        flag = false,
+        last_update = 0,
+        shakeresult = 8000,
+        x = y = z = last_x = last_y = last_z = 0;
+    if (window.DeviceMotionEvent) {
+        window.addEventListener("devicemotion", deviceMotionHandler, false);
+    } else {
+        alert("本设备不支持摇一摇");
+    }
+    function deviceMotionHandler(eventData) {
+        if (!flag) {
+            return;
+        };
+        var acceleration = eventData.accelerationIncludingGravity,
+            currTime = new Date().valueOf(),
+            diffTime = currTime - last_update;
+        if (diffTime > 100) {
+            last_update = currTime;
+            x = acceleration.x;
+            y = acceleration.y;
+            z = acceleration.z;
+            var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000
+            var status = document.getElementById("status");
+            if (speed > shake) {
+                shakeresult += parseInt(speed / 100);
+                if (shakeresult > 100000) {
+                    shakeresult = 100000;
+                    status.innerHTML = "你摇了中" + parseInt(shakeresult / 1000) + "";
+                };
+            };
+            last_x = x;
+            last_y = y;
+            last_z = z;
+        };
+    };
+
+    var TIME_CONST = 45; // 摇一摇的时间
+    var countdown = TIME_CONST;
+    function onStart(val) {
+        flag = true;
+        count = 0;
+        settime(val);
+    };
+    function settime(val) {
+        if (countdown == 0) { // 计时结束
+            val.removeAttribute("disabled");
+            val.value = "重新开始";
+            countdown = TIME_CONST;
+            //最后结果
+            flag = false;
+            document.getElementById('shake').style.display = 'none';
+            document.getElementById('beginshake').style.display = 'none';
+            document.getElementById('shakeend').style.display = 'block';
+            toResultPage(shakeresult);
+        } else {
+            val.setAttribute("disabled", true);
+            val.value = "赶紧拼命摇(" + countdown + ")";
+            countdown--;
+            setTimeout(function () {
+                settime(val)
+            }, 1000);
+        }
+    }
+</script>
