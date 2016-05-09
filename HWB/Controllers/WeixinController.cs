@@ -74,10 +74,14 @@ namespace HWB.Controllers
 
         public ActionResult Show(string id)
         {
-            //ShakeItem item = ShakeItemDbHelper.GetById(id);
+            ShakeItem item = ShakeItemDbHelper.GetById(id);
+            if (item.Score > 0)
+            {
+                return RedirectToAction("Finish", new { id = item.Id });
+            }
             WxConfig config = WeixinAccess.GetWxConfig(Request);
             ViewBag.Title = config.Title = "稻清产品宣传";
-            config.Desc = "这是描述，啦啦啦";
+            config.Desc = "稻清,稻瘟管理新标准！";
             config.ImgUrl = ImgUrl;
             ViewBag.Config = config;
             ViewBag.Id = id;
@@ -89,7 +93,7 @@ namespace HWB.Controllers
             ShakeItem item = ShakeItemDbHelper.GetById(id);
             item.Score = result;
             ShakeItemDbHelper.Update(item);
-
+            return Content("");
             return RedirectToAction("Finish", new { id = item.Id });
         }
 

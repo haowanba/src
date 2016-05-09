@@ -132,19 +132,19 @@
     var shakeItemId = '@ViewBag.Id', host = location.host;
 
     function toResultPage(score) {
-        //$.ajax({
-        //    url: "/weixin/update",
-        //    type: "post",
-        //    data: { id: shakeItemId, result: score },
-        //    dataType: "json",
-        //    success: function (r) {
+        $.ajax({
+            url: "/weixin/update",
+            type: "post",
+            data: { id: shakeItemId, result: score },
+            dataType: "json",
+            success: function (r) {
 
-        //    },
-        //    error: function (r) {
-        //        alert("哎呀，提交失败了。。。");
-        //    }
-        //});
-        window.location = "http://" + host + "/weixin/update?id=" + shakeItemId + "&result=" + score;
+            },
+            error: function (r) {
+                alert("哎呀，提交失败了。。。");
+            }
+        });
+        //window.location = "http://" + host + "/weixin/update?id=" + shakeItemId + "&result=" + score;
     }
     var shake = 4000,
         flag = false,
