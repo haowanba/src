@@ -1,0 +1,139 @@
+﻿
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #A0A2A1;
+    font-family: "微软雅黑";
+}
+
+body, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, select, textarea, button, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+ul, dl, ol {
+    list-style: none;
+}
+
+img, fieldset, input[type="submit"] {
+    border: 0 none;
+}
+
+img {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+em {
+    font-style: normal;
+}
+
+strong {
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button, input[type="button"] {
+    cursor: pointer;
+    border: 0 none;
+}
+
+textarea {
+    word-wrap: break-word;
+    resize: none;
+}
+/* word-wrap for opera, resize for webkit */
+menu {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: none !important;
+    font-family: Helvetica;
+}
+
+input[type="number"] {
+    -webkit-user-select: text;
+}
+
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+a, button, input, img {
+    -webkit-touch-callout: none;
+}
+
+input, select, textarea {
+    outline: none;
+}
+
+html {
+    -ms-touch-action: none;
+}
+
+input, button {
+    height: 3rem;
+    opacity: 0.8;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-family: "微软雅黑";
+    width: 90%;
+    margin: 1rem auto;
+    display: block;
+}
+
+.shake {
+    background: url("/Content/images/shake.jpg") no-repeat center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+input {
+    color: #65AC1E;
+    border: #65AC1E;
+}
+
+button {
+    background-color: #CCE9D5;
+    color: #8BA796;
+}
+
+.shakeend {
+    display: none;
+    font-size: 2rem;
+    padding: 5rem 1rem;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.shaking {
+    animation: rotate 1.2s infinite ease-in-out;
+}

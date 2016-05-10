@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data.Entity;
-using System.Linq;
 using System.Web.Mvc;
 using Common.Define;
 using SqlServer;
@@ -10,6 +8,7 @@ namespace HWB.Controllers
 {
     public class WeixinController : Controller
     {
+        private const string Title = "欢迎参加稻清上市会";
         private string _imgUrl;
         private string ImgUrl
         {
@@ -41,7 +40,7 @@ namespace HWB.Controllers
         public ActionResult Play()
         {
             WxConfig config = WeixinAccess.GetWxConfig(Request);
-            ViewBag.Title = config.Title = "稻清产品宣传";
+            ViewBag.Title = config.Title = Title;
             config.Desc = "稻清,稻瘟管理新标准！";
             config.ImgUrl = ImgUrl;
             ViewBag.Config = config;
@@ -67,8 +66,10 @@ namespace HWB.Controllers
                     tmp.Area = item.Area;
                     tmp.Score = item.Score;
                     ShakeItemDbHelper.Update(tmp);
+                    item = tmp;
                 }
             }
+            return Json(new { id = item.Id });
             return RedirectToAction("Show", new { id = item.Id });
         }
 
@@ -80,7 +81,7 @@ namespace HWB.Controllers
                 return RedirectToAction("Finish", new { id = item.Id });
             }
             WxConfig config = WeixinAccess.GetWxConfig(Request);
-            ViewBag.Title = config.Title = "稻清产品宣传";
+            ViewBag.Title = config.Title = Title;
             config.Desc = "稻清,稻瘟管理新标准！";
             config.ImgUrl = ImgUrl;
             ViewBag.Config = config;
@@ -101,9 +102,9 @@ namespace HWB.Controllers
         {
             ShakeItem item = ShakeItemDbHelper.GetById(id);
             WxConfig config = WeixinAccess.GetWxConfig(Request);
-            config.Desc = String.Format("我是{0}，来自{1}，2016我推广稻清{2}亩。防治稻瘟，我推荐稻清。", item.Name, item.Area, item.Score);
+            config.Desc = String.Format("我是{1}{0}，2016我推广稻清{2}亩，为农户增产{3}公斤，小伙伴们为我点赞助力。", item.Name, item.Area, item.Score, item.Score * 50);
             config.ImgUrl = ImgUrl;
-            ViewBag.Title = config.Title = "稻清产品宣传";
+            ViewBag.Title = config.Title = Title;
             ViewBag.Config = config;
             return View(item);
         }

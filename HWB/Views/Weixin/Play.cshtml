@@ -26,7 +26,7 @@
         list-style: none;
     }
 
-    img, fieldset, input[type="submit"] {
+    img, fieldset, input[type="submit"], #checkIn {
         border: 0 none;
     }
 
@@ -144,7 +144,7 @@
     <p class="title">稻清<sup>®</sup></p>
     <p class="content">稻瘟管理新标准！</p>
 
-    <form method="post" action="/weixin/add" class="userinfo">
+    <div class="userinfo">
         <div>
             <input name="Name" id="Name" type="text" placeholder="请输入姓名" />
         </div>
@@ -152,42 +152,76 @@
             <input name="Telephone" id="Telephone" type="number" maxlength="11" placeholder="请输入手机号" />
         </div>
         <div>
-            <input name="Area" id="Area" type="text" placeholder="请输入省、市、县、镇、村" />
+            <input name="Area" id="Area" type="text" placeholder="请输入县、区" />
         </div>
-        <button type="submit">提交</button>
-    </form>
+        <button id="checkIn">签到</button>
+    </div>
 </div>
 <script type="text/javascript">
+
+    $("#checkIn").on("click", function () {
+        var item = {
+            Name: $("#Name").val(),
+            Telephone: $("#Telephone").val(),
+            Area: $("#Area").val()
+        };
+        if (!item.Name) {
+            alert("您还没有输入姓名。");
+            return;
+        }
+        if (!item.Telephone) {
+            alert("您还没有输入手机号。");
+            return;
+        }
+        if (!item.Area) {
+            alert("您还没有输入县、区。");
+            return;
+        }
+
+        $.ajax("/weixin/add", {
+            type: "post",
+            data: item,
+            dataType: "json",
+            success: function (r) {
+                if (r.id) {
+                    window.location = "http://" + location.host + "/weixin/Show?id=" + r.id;
+                } else {
+                    alert("哎呀，签到失败了。。。");
+                }
+            },
+            error: function (r) {
+                alert("哎呀，提交失败了。。。");
+            }
+        });
+
+        //$.ajax({
+        //    url: "/weixin/add",
+        //    type: "post",
+        //    data: item,
+        //    dataType: "json",
+        //    success: function (r) {
+        //        if (r.id) {
+        //            window.location = "http://" + location.host + "/weixin/Show?id=" + r.id;
+        //        } else {
+        //            alert("哎呀，签到失败了。。。");
+        //        }
+        //    },
+        //    error: function (r) {
+        //        alert("哎呀，提交失败了。。。");
+        //    }
+        //});
+    });
+
     (function (doc, win) {
         var docEl = doc.documentElement,
-          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-          recalc = function () {
-              var clientWidth = docEl.clientWidth;
-              if (!clientWidth) return;
-              docEl.style.fontSize = (clientWidth / 27) + 'px';
-          };
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth / 27) + 'px';
+            };
         if (!doc.addEventListener) return;
         win.addEventListener(resizeEvt, recalc, false);
         doc.addEventListener('DOMContentLoaded', recalc, false);
-
-        //$("#submit").on("click", function() {
-        //    var item = {
-        //        Name: $("#Name").val(),
-        //        Telephone: $("#Telephone").val(),
-        //        Area: $("#Area").val()
-        //    };
-        //    $.ajax({
-        //        url: "/weixin/add",
-        //        type: "post",
-        //        data: item,
-        //        dataType: "json",
-        //        success: function(r) {
-
-        //        },
-        //        error: function(r) {
-        //            alert("哎呀，提交失败了。。。");
-        //        }
-        //    });
-        //});
     })(document, window);
 </script>
