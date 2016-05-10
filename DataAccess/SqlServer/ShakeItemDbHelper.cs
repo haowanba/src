@@ -6,7 +6,8 @@ namespace SqlServer
 {
     public class ShakeItemDbHelper
     {
-        private const string ConnStr = "Server=tcp:x80axq4pow.database.chinacloudapi.cn,1433;Database=DB_VB5KBFQ6HI;User ID=wxcs@x80axq4pow;Password=fa450@flse;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
+        //private const string ConnStr = "Server=tcp:x80axq4pow.database.chinacloudapi.cn,1433;Database=DB_VB5KBFQ6HI;User ID=wxcs@x80axq4pow;Password=fa450@flse;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
+        private const string ConnStr = "Server=tcp:uhtw7f2wrt.database.chinacloudapi.cn,1433;Database=hwb;User ID=hwb@uhtw7f2wrt;Password=P@ssw0rd;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
 
         internal static bool DbExist(string dbName)
         {

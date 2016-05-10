@@ -327,3 +327,5 @@ C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\zh-Hant\System.Spatial.res
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\obj\Release\HWB.csprojResolveAssemblyReference.cache
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\obj\Release\HWB.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\obj\Release\HWB.pdb
+D:\Documents\GitHub\src\HWB\bin\SqlServer.dll
+D:\Documents\GitHub\src\HWB\bin\SqlServer.pdb

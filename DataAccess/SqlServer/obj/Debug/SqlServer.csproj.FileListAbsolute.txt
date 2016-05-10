@@ -8,3 +8,13 @@ C:\Users\xianvv\Documents\GitHub\haowanba\src\DataAccess\SqlServer\bin\Debug\zh-
 C:\Users\xianvv\Documents\GitHub\haowanba\src\DataAccess\SqlServer\obj\Debug\SqlServer.csprojResolveAssemblyReference.cache
 C:\Users\xianvv\Documents\GitHub\haowanba\src\DataAccess\SqlServer\obj\Debug\SqlServer.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\DataAccess\SqlServer\obj\Debug\SqlServer.pdb
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Debug\SqlServer.dll
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Debug\SqlServer.pdb
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Debug\Common.dll
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Debug\Common.pdb
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Documents\GitHub\src\DataAccess\SqlServer\obj\Debug\SqlServer.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\src\DataAccess\SqlServer\obj\Debug\SqlServer.dll
+D:\Documents\GitHub\src\DataAccess\SqlServer\obj\Debug\SqlServer.pdb

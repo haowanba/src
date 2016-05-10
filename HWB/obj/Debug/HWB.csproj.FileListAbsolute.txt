@@ -327,3 +327,5 @@ C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\ru\System.Spatial.resource
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\obj\Debug\HWB.pdb
+D:\Documents\GitHub\src\HWB\bin\SqlServer.dll
+D:\Documents\GitHub\src\HWB\bin\SqlServer.pdb
