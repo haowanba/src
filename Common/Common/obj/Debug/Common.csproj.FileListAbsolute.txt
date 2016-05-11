@@ -19,9 +19,6 @@ D:\Documents\GitHub\src\Common\Common\bin\Debug\EntityFramework.xml
 D:\Documents\GitHub\src\Common\Common\bin\Debug\EntityFramework.SqlServer.xml
 D:\Documents\GitHub\src\Common\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\Documents\GitHub\src\Common\Common\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
-D:\Documents\GitHub\src\Common\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
-D:\Documents\GitHub\src\Common\Common\obj\Debug\Common.dll
-D:\Documents\GitHub\src\Common\Common\obj\Debug\Common.pdb
 C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Debug\Common.dll.config
 C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Debug\Common.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Debug\Common.pdb
@@ -34,3 +31,8 @@ C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\bin\Debug\zh-Hans\En
 C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\obj\Debug\Common.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\Common\Common\obj\Debug\Common.pdb
+D:\Documents\GitHub\src\HWB\bin\Common.dll.config
+D:\Documents\GitHub\src\HWB\bin\Common.dll
+D:\Documents\GitHub\src\HWB\bin\Common.pdb
+D:\Documents\GitHub\src\Common\Common\obj\Debug\Common.dll
+D:\Documents\GitHub\src\Common\Common\obj\Debug\Common.pdb

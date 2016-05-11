@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using Common.Config;
 using Common.Define;
 using SqlServer;
 using Weixin.Api;
@@ -19,8 +20,9 @@ namespace HWB.Controllers
                     Uri requestUrl = Request.Url;
                     if (requestUrl != null)
                     {
-                        string host = requestUrl.Host;
-                        _imgUrl = requestUrl.Scheme + "://" + host + "/Content/images/logo.jpg";
+                        string host = ConfigReader.GetAppSettingsValue(WeixinConstName.HomeUrl);
+                        //_imgUrl = requestUrl.Scheme + "://" + host + "/Content/images/logo.jpg?a=2";
+                        _imgUrl = "http://hwb.blob.core.chinacloudapi.cn/images/logo.jpg";
                     }
                     else
                     {
@@ -75,38 +77,65 @@ namespace HWB.Controllers
 
         public ActionResult Show(string id)
         {
-            ShakeItem item = ShakeItemDbHelper.GetById(id);
-            if (item.Score > 0)
+            try
             {
-                return RedirectToAction("Finish", new { id = item.Id });
+                ShakeItem item = ShakeItemDbHelper.GetById(id);
+                if (item.Score > 0)
+                {
+                    return RedirectToAction("Finish", new { id = item.Id });
+                }
+                if (String.IsNullOrEmpty(item.Name))
+                {
+                    return RedirectToAction("Play");
+                }
+                WxConfig config = WeixinAccess.GetWxConfig(Request);
+                ViewBag.Title = config.Title = Title;
+                config.Desc = "稻清,稻瘟管理新标准！";
+                config.ImgUrl = ImgUrl;
+                ViewBag.Config = config;
+                ViewBag.Id = id;
+                return View();
             }
-            WxConfig config = WeixinAccess.GetWxConfig(Request);
-            ViewBag.Title = config.Title = Title;
-            config.Desc = "稻清,稻瘟管理新标准！";
-            config.ImgUrl = ImgUrl;
-            ViewBag.Config = config;
-            ViewBag.Id = id;
-            return View();
+            catch (Exception e)
+            {
+                return RedirectToAction("Play");
+            }
         }
 
         public ActionResult Update(string id, int result)
         {
-            ShakeItem item = ShakeItemDbHelper.GetById(id);
-            item.Score = result;
-            ShakeItemDbHelper.Update(item);
-            return Content("");
-            return RedirectToAction("Finish", new { id = item.Id });
+            try
+            {
+                ShakeItem item = ShakeItemDbHelper.GetById(id);
+                item.Score = result;
+                ShakeItemDbHelper.Update(item);
+
+                string desc = String.Format("我是{1}-{0}，我将推广稻清{2}亩，水稻增产{3}公斤，请为我助力点赞。", item.Name, item.Area, item.Score, item.Score * 50);
+                return Json(new { desc, ImgUrl, Title });
+                return RedirectToAction("Finish", new { id = item.Id });
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Play");
+            }
         }
 
         public ActionResult Finish(string id)
         {
-            ShakeItem item = ShakeItemDbHelper.GetById(id);
-            WxConfig config = WeixinAccess.GetWxConfig(Request);
-            config.Desc = String.Format("我是{1}{0}，2016我推广稻清{2}亩，为农户增产{3}公斤，小伙伴们为我点赞助力。", item.Name, item.Area, item.Score, item.Score * 50);
-            config.ImgUrl = ImgUrl;
-            ViewBag.Title = config.Title = Title;
-            ViewBag.Config = config;
-            return View(item);
+            try
+            {
+                ShakeItem item = ShakeItemDbHelper.GetById(id);
+                WxConfig config = WeixinAccess.GetWxConfig(Request);
+                config.Desc = String.Format("我是{1}-{0}，我将推广稻清{2}亩，水稻增产{3}公斤，请为我助力点赞。", item.Name, item.Area, item.Score, item.Score * 50);
+                config.ImgUrl = ImgUrl;
+                ViewBag.Title = config.Title = Title;
+                ViewBag.Config = config;
+                return View(item);
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Play");
+            }
         }
     }
 }

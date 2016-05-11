@@ -70,7 +70,7 @@ namespace Weixin.Api
             {
                 return new WxConfig();
             }
-            string host = requestUrl.Host;
+            string host = ConfigReader.GetAppSettingsValue(WeixinConstName.HomeUrl);
             string pathAndQuery = requestUrl.PathAndQuery;
             string url = requestUrl.Scheme + "://" + host + pathAndQuery;
             string appid = ConfigReader.GetAppSettingsValue(WeixinConstName.Appid);
@@ -100,6 +100,8 @@ namespace Weixin.Api
 
         public const string Ticket = "weixin_ticket";
         public const string Token = "weixin_token";
+
+        public const string HomeUrl = "HomeUrl";
     }
 
     [DataContract]

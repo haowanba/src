@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-    <link href="~/Content/images/logo.jpg" rel="shortcut icon" type="image/x-icon" />
+    <link href="http://hwb.blob.core.chinacloudapi.cn/images/logo.jpg" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
     <script src="~/Scripts/jquery-1.8.2.js"></script>
@@ -54,9 +54,9 @@
                 }
             });
 
-            wx.hideMenuItems({
-                menuList: ['onMenuShareQQ','onMenuShareQZone'] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
-            });
+            //wx.hideMenuItems({
+            //    menuList: ['onMenuShareQQ','onMenuShareQZone'] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
+            //});
             setTimeout(function() {
                 wx.showMenuItems({
                     menuList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 要显示的菜单项，所有menu项见附录3

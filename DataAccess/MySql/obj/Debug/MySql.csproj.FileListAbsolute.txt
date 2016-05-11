@@ -1,14 +1,6 @@
-C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\DataAccess\MySql\bin\Debug\MySql.dll.config
-C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\DataAccess\MySql\bin\Debug\MySql.dll
-C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\DataAccess\MySql\bin\Debug\MySql.pdb
-C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\DataAccess\MySql\bin\Debug\MySql.Data.dll
-C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\DataAccess\MySql\obj\Debug\MySql.csprojResolveAssemblyReference.cache
-C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\DataAccess\MySql\obj\Debug\MySql.dll
-C:\Users\xianvv\Documents\Visual Studio 2013\Projects\HWB\DataAccess\MySql\obj\Debug\MySql.pdb
-D:\Documents\GitHub\src\DataAccess\MySql\bin\Debug\MySql.dll.config
-D:\Documents\GitHub\src\DataAccess\MySql\bin\Debug\MySql.dll
-D:\Documents\GitHub\src\DataAccess\MySql\bin\Debug\MySql.pdb
-D:\Documents\GitHub\src\DataAccess\MySql\bin\Debug\MySql.Data.dll
+D:\Documents\GitHub\src\HWB\bin\MySql.dll.config
+D:\Documents\GitHub\src\HWB\bin\MySql.dll
+D:\Documents\GitHub\src\HWB\bin\MySql.pdb
 D:\Documents\GitHub\src\DataAccess\MySql\obj\Debug\MySql.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\src\DataAccess\MySql\obj\Debug\MySql.dll
 D:\Documents\GitHub\src\DataAccess\MySql\obj\Debug\MySql.pdb

@@ -98,7 +98,7 @@ input, button {
 }
 
 .shake {
-    background: url("/Content/images/shake.jpg") no-repeat center center;
+    background: url("http://hwb.blob.core.chinacloudapi.cn/images/shake.jpg") no-repeat center center;
     width: 100%;
     height: 100%;
     position: absolute;

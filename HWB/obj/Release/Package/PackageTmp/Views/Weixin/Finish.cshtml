@@ -7,8 +7,7 @@
     body {
         width: 100%;
         height: 100%;
-        overflow: hidden;
-        background-color: #65AC1E;
+        overflow: hidden; /* background-color:#65AC1E; */
         font-family: "微软雅黑";
     }
 
@@ -66,7 +65,6 @@
     body {
         -webkit-user-select: none;
         -webkit-text-size-adjust: none !important;
-        font-family: Helvetica;
     }
 
     input[type="number"] {
@@ -101,12 +99,7 @@
         margin: 1rem auto;
         display: block;
     }
-
-    body {
-        background-image: url("/Content/images/bg.jpg");
-        background-position: -200px 0;
-    }
-
+    /* body{background-image: url("images/bg.jpg");background-position:-200px 0;} */
     input {
         color: #65AC1E;
         border: #65AC1E;
@@ -123,41 +116,89 @@
 
     .daoqing {
         color: #009C00;
-        text-shadow: 1px 1px 1px #004900;
-        font-size: 2rem;
+        font-weight: 900; /* text-shadow: 1px 1px 1px #004900; */
     }
 
     .shakeresult {
-        font-size: 2rem;
-        opacity: 0.5;
+        font-size: 1.2rem;
         width: 90%;
-        margin: 15px auto;
+        margin: 2rem auto 0;
+    }
+
+    p {
+        font-size: 1.2rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        text-decoration: none;
+    }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+    .red {
+        color: red;
+    }
+
+    .productrea {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .gotoshakeline {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .gotoshake {
+        font-size: 2rem;
+        font-weight: bold;
+        background-color: #ff8500;
+        border-radius: 5px;
+        padding: 0 2rem;
+        color: white;
     }
 </style>
+
+<div class="shakeresult">
+    我是<span id="area"></span>-<span id="name"></span>，2016我选择<span class="daoqing">稻清<sup>®</sup></span>为<span id="score"></span>亩水稻保驾护航，水稻将增产<span id="finalresult"></span>kg，请<span class="red">小伙伴们</span>帮我点赞赢大奖。
+</div>
+<p class="productrea">为什么需要<span class="daoqing">稻清<sup>®</sup></span>？</p>
+<img src="http://hwb.blob.core.chinacloudapi.cn/images/1.jpg">
+<img src="http://hwb.blob.core.chinacloudapi.cn/images/2.jpg">
+<img src="http://hwb.blob.core.chinacloudapi.cn/images/3.jpg">
+<p>用<span class="daoqing">稻清<sup>®</sup></span>，收获健康水稻，更多回报，才更划算。</p>
+<p>巴斯夫邀您加入<span class="daoqing">稻清<sup>®</sup></span>体验活动，现在点击</p>
+<p class="gotoshakeline"><a class="gotoshake red" href="http://hwb.chinacloudsites.cn/">我也要参与</a></p>
+<p>参与摇一摇互动，将摇一摇结果分享到朋友圈，集满50赞，就有机会获得含有美国专利技术的高科技面料玉米纤维polo衫一件。</p>
+<img src="http://hwb.blob.core.chinacloudapi.cn/images/4.jpg">
+<p>温馨提示：</p>
+<p>1.活动时间截止至5月31日;</p>
+<p>2.集赞完成后截图至“微植保”公众号（下方有公众号二维码，扫码关注哦），活动名额仅限100名，先到先得，我们会有专人联系您;</p>
+<p>3.本活动最终解释权归"微植保"所有.</p>
+<p style="text-align: center;margin-top: 1rem;">扫码关注"微植保"公众号</p>
+<img src="http://hwb.blob.core.chinacloudapi.cn/images/weizhibao.jpg">
+
 <script type="text/javascript">
     (function (doc, win) {
         var docEl = doc.documentElement,
-          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-          recalc = function () {
-              var clientWidth = docEl.clientWidth;
-              if (!clientWidth) return;
-              docEl.style.fontSize = (clientWidth / 27) + 'px';
-          };
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth / 27) + 'px';
+            };
         if (!doc.addEventListener) return;
         win.addEventListener(resizeEvt, recalc, false);
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
-    /*		window.onload = function(){
-              document.body.style.display = 'block';
-            };*/
+
+    document.getElementById("area").innerHTML = "@Model.Area";
+    document.getElementById("name").innerHTML = "@Model.Name";
+    document.getElementById("score").innerHTML = "@Model.Score";
+    document.getElementById("finalresult").innerHTML = @Model.Score*50;
 </script>
-<div class="shakeresult">
-    <p>我是 @Model.Name，来自 @Model.Area；</p>
-    <p>2016我推广<span class="daoqing">稻清<sup>®</sup></span> @Model.Score 亩</p>
-    <p>防治稻瘟，我推荐<span class="daoqing">稻清<sup>®</sup></span>！</p>
-</div>
-<img src="/Content/images/1.jpg">
-<img src="/Content/images/2.jpg">
-<img src="/Content/images/3.jpg">
-<img src="/Content/images/4.jpg">
-<img src="/Content/images/weizhibao.jpg">
