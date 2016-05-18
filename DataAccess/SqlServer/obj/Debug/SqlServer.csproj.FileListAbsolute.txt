@@ -1,4 +1,0 @@
-D:\Documents\GitHub\src\HWB\bin\SqlServer.dll
-D:\Documents\GitHub\src\HWB\bin\SqlServer.pdb
-D:\Documents\GitHub\src\DataAccess\SqlServer\obj\Debug\SqlServer.dll
-D:\Documents\GitHub\src\DataAccess\SqlServer\obj\Debug\SqlServer.pdb

@@ -113,7 +113,6 @@ C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\HWB.dll.config
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\HWB.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\HWB.pdb
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\Antlr3.Runtime.dll
-C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\Common.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\DotNetOpenAuth.AspNet.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\DotNetOpenAuth.Core.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\DotNetOpenAuth.OAuth.Consumer.dll
@@ -128,7 +127,6 @@ C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\Microsoft.Web.Infrastructu
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\Microsoft.Web.WebPages.OAuth.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\Newtonsoft.Json.dll
-C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\SqlServer.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\System.Net.Http.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\System.Net.Http.Formatting.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\System.Net.Http.WebRequest.dll
@@ -146,7 +144,6 @@ C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\System.Web.WebPages.Razor.
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\WebGrease.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\WebMatrix.Data.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\WebMatrix.WebData.dll
-C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\Weixin.dll
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\Common.pdb
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\SqlServer.pdb
 C:\Users\xianvv\Documents\GitHub\haowanba\src\HWB\bin\Weixin.pdb
