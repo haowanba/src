@@ -1,6 +1,0 @@
-D:\Documents\GitHub\src\HWB\bin\MySql.dll.config
-D:\Documents\GitHub\src\HWB\bin\MySql.dll
-D:\Documents\GitHub\src\HWB\bin\MySql.pdb
-D:\Documents\GitHub\src\DataAccess\MySql\obj\Debug\MySql.csprojResolveAssemblyReference.cache
-D:\Documents\GitHub\src\DataAccess\MySql\obj\Debug\MySql.dll
-D:\Documents\GitHub\src\DataAccess\MySql\obj\Debug\MySql.pdb
