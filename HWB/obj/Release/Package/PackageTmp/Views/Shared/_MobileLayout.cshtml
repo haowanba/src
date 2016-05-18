@@ -54,15 +54,22 @@
                 }
             });
 
-            //wx.hideMenuItems({
-            //    menuList: ['onMenuShareQQ','onMenuShareQZone'] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
-            //});
+            wx.hideMenuItems({
+                menuList: ['onMenuShareQQ','onMenuShareQZone'] // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
+            });
             setTimeout(function() {
                 wx.showMenuItems({
                     menuList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 要显示的菜单项，所有menu项见附录3
                 });
             },500);
         });
+        
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?2f9f4c925fe92ca1606f50da3460b484";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
     </script>
     @RenderBody()
 </body>

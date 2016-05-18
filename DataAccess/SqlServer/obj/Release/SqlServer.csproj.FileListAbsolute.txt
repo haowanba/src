@@ -1,0 +1,10 @@
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Release\SqlServer.dll
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Release\SqlServer.pdb
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Release\Common.dll
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Release\EntityFramework.dll
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Release\Common.pdb
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Release\EntityFramework.xml
+D:\Documents\GitHub\src\DataAccess\SqlServer\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\Documents\GitHub\src\DataAccess\SqlServer\obj\Release\SqlServer.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\src\DataAccess\SqlServer\obj\Release\SqlServer.dll
+D:\Documents\GitHub\src\DataAccess\SqlServer\obj\Release\SqlServer.pdb
