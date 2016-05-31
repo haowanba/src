@@ -10,4 +10,12 @@ namespace HWB
             filters.Add(new HandleErrorAttribute());
         }
     }
+
+    public class WeixinFilterAttribute : AuthorizeAttribute
+    {
+        public override void OnAuthorization(AuthorizationContext filterContext)
+        {
+            base.OnAuthorization(filterContext);
+        }
+    }
 }

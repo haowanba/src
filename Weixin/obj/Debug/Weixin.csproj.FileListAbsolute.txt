@@ -1,0 +1,6 @@
+c:\Users\xianvv\documents\visual studio 2013\Projects\HWB\HWB\bin\Weixin.dll.config
+c:\Users\xianvv\documents\visual studio 2013\Projects\HWB\HWB\bin\Weixin.dll
+c:\Users\xianvv\documents\visual studio 2013\Projects\HWB\HWB\bin\Weixin.pdb
+c:\Users\xianvv\documents\visual studio 2013\Projects\HWB\Weixin\obj\Debug\Weixin.csprojResolveAssemblyReference.cache
+c:\Users\xianvv\documents\visual studio 2013\Projects\HWB\Weixin\obj\Debug\Weixin.dll
+c:\Users\xianvv\documents\visual studio 2013\Projects\HWB\Weixin\obj\Debug\Weixin.pdb

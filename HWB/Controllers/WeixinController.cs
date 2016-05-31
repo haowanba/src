@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web.Mvc;
-using Common.Config;
 using Common.Define;
 using SqlServer;
 using Weixin.Api;
@@ -20,7 +19,7 @@ namespace HWB.Controllers
                     Uri requestUrl = Request.Url;
                     if (requestUrl != null)
                     {
-                        string host = ConfigReader.GetAppSettingsValue(WeixinConstName.HomeUrl);
+                        //string host = ConfigReader.GetAppSettingsValue(WeixinConstName.HomeUrl);
                         //_imgUrl = requestUrl.Scheme + "://" + host + "/Content/images/logo.jpg?a=2";
                         _imgUrl = "http://hwb.blob.core.chinacloudapi.cn/images/logo.jpg";
                     }
@@ -39,7 +38,11 @@ namespace HWB.Controllers
             return Content(s);
         }
 
-        public ActionResult Play()
+        /// <summary>
+        /// 录入信息页面
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult DataInput()
         {
             WxConfig config = WeixinAccess.GetWxConfig(Request);
             ViewBag.Title = config.Title = Title;
@@ -49,7 +52,12 @@ namespace HWB.Controllers
             return View();
         }
 
-        public ActionResult Add(ShakeItem item)
+        /// <summary>
+        /// 签到
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public ActionResult CheckIn(ShakeItem item)
         {
             if (String.IsNullOrEmpty(item.Telephone))
             {
@@ -72,10 +80,15 @@ namespace HWB.Controllers
                 }
             }
             return Json(new { id = item.Id });
-            return RedirectToAction("Show", new { id = item.Id });
         }
 
-        public ActionResult Show(string id)
+        /// <summary>
+        /// 摇一摇页面
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        //[WeixinFilter]
+        public ActionResult Shake(string id)
         {
             try
             {
@@ -86,7 +99,7 @@ namespace HWB.Controllers
                 }
                 if (String.IsNullOrEmpty(item.Name))
                 {
-                    return RedirectToAction("Play");
+                    return RedirectToAction("DataInput");
                 }
                 WxConfig config = WeixinAccess.GetWxConfig(Request);
                 ViewBag.Title = config.Title = Title;
@@ -96,12 +109,18 @@ namespace HWB.Controllers
                 ViewBag.Id = id;
                 return View();
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return RedirectToAction("Play");
+                return RedirectToAction("DataInput");
             }
         }
 
+        /// <summary>
+        /// 摇一摇完了更新得分
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="result"></param>
+        /// <returns></returns>
         public ActionResult Update(string id, int result)
         {
             try
@@ -112,14 +131,18 @@ namespace HWB.Controllers
 
                 string desc = String.Format("我是{1}-{0}，我将推广稻清{2}亩，水稻增产{3}公斤，请为我助力点赞。", item.Name, item.Area, item.Score, item.Score * 50);
                 return Json(new { desc, ImgUrl, Title });
-                return RedirectToAction("Finish", new { id = item.Id });
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return RedirectToAction("Play");
+                return RedirectToAction("DataInput");
             }
         }
 
+        /// <summary>
+        /// 分享结果后跳转到结果页面
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Finish(string id)
         {
             try
@@ -132,9 +155,9 @@ namespace HWB.Controllers
                 ViewBag.Config = config;
                 return View(item);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return RedirectToAction("Play");
+                return RedirectToAction("DataInput");
             }
         }
     }
