@@ -140,6 +140,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\audio\shake.mp3" />
+    <Content Include="Content\audio\shakeend.mp3" />
+    <Content Include="Content\css\Show.css" />
+    <Content Include="Content\images\1.jpg" />
+    <Content Include="Content\images\2.jpg" />
+    <Content Include="Content\images\3.jpg" />
+    <Content Include="Content\images\4.jpg" />
+    <Content Include="Content\images\bg.jpg" />
+    <Content Include="Content\images\logo.jpg" />
+    <Content Include="Content\images\shake.jpg" />
+    <Content Include="Content\images\weizhibao.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
